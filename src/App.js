@@ -1,12 +1,37 @@
 import React, {Component} from 'react';
 import Tab from 'react-bootstrap/Tab';
 import Nav from 'react-bootstrap/Nav'
+import Article from './Article';
 import './App.css';
 
 class App extends Component {
   constructor(props){
     super(props);
+    this.state = {
+      articles: [
+        {
+          id: "fox-news",
+          title: 'Bodies found in Canada are confirmed as wanted killers; cause of death appears to be suicide by gunfire',
+          image: 'image',
+          source: 'Fox News'
+        },
+        {
+          id: "fox-news",
+          title: 'Bodies found in Canada are confirmed as wanted killers; cause of death appears to be suicide by gunfire',
+          image: 'image',
+          source: 'Fox News'
+        },
+        {
+          id: "fox-news",
+          title: 'Bodies found in Canada are confirmed as wanted killers; cause of death appears to be suicide by gunfire',
+          image: 'image',
+          source: 'Fox News'
+        },
+      ]
+    }
   }
+
+  
 
   render(){
     return (
@@ -32,6 +57,23 @@ class App extends Component {
               <Tab.Content>
                 <Tab.Pane eventKey="top-headlines">
                   <div className="heading">TOP HEADLINES</div>
+                  <div className="article-container">
+                    
+                    {
+                      this.state.articles.map((article) => {
+
+                        var articleProps = {
+                          ...article,
+                          key: article.id,
+                        };
+
+                        return(
+                          <Article {...articleProps}/>
+                        )
+                      })
+                    }
+
+                  </div>
                 </Tab.Pane>
                 <Tab.Pane eventKey="business"><div className="heading">BUSINESS</div></Tab.Pane>
                 <Tab.Pane eventKey="entertainment"><div className="heading">ENTERTAINMENT</div></Tab.Pane>
