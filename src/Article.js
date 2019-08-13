@@ -11,11 +11,9 @@ class Article extends Component{
                 <div className="title">
                     {this.props.title}
                 </div>
-                <div className="image">
-                    {this.props.image}
-                </div>
+                <img src={this.props.urlToImage}></img>
                 <div className="source">
-                    {this.props.source}
+                    {this.props.source.name}
                 </div>
             </div>
         );

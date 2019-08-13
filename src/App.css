@@ -1,4 +1,5 @@
 @import 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css';
 
 .app{
   background-color: #1a1a1a;
@@ -28,6 +29,16 @@ header input{
   width: 15rem;
   padding-left: 1rem;
   height: 2.3rem;
+  outline: none;
+}
+
+.searchbar i{
+  color: white;
+}
+
+.searchbar button{
+  background-color: #1a1a1a;
+  border: none;
 }
 
 .tab-container{
@@ -36,6 +47,7 @@ header input{
 }
 
 .main-content{
+  width: 100%;
   flex: 1 0 auto;
   padding: 1rem 2rem;
 }
@@ -55,6 +67,7 @@ header input{
 }
 
 .article-container{
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -62,8 +75,12 @@ header input{
 .article{
   border: thin pink solid;
   flex: 0 0 20rem;
-  margin-right: 1rem;
+  margin-right: 2rem;
   padding: 1rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .source{
@@ -72,13 +89,16 @@ header input{
   color: #1a1a1a;
   font-weight: bold;
   font-size: 1.2rem;
-}
-
-.image{
-  margin: 1rem 0;
+  padding: 0.3rem 0;
 }
 
 .title{
   text-align: center;
   font-weight: bold;
+  font-size: 1.3rem;
+}
+
+img{
+  width: 18rem;
+  margin: 1rem 0;
 }
